@@ -264,7 +264,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 322515578}
-  - component: {fileID: 322515577}
   - component: {fileID: 322515579}
   m_Layer: 0
   m_Name: Mouse Position
@@ -273,19 +272,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &322515577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 322515576}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1881194f7480b704988d665b00458632, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  storeMousePosition: {x: 0, y: 0, z: 0}
 --- !u!4 &322515578
 Transform:
   m_ObjectHideFlags: 0
@@ -314,6 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storeMousePosition: {x: 0, y: 0, z: 0}
+  storeMousePositionEnd: {x: 0, y: 0, z: 0}
 --- !u!1 &349522052
 GameObject:
   m_ObjectHideFlags: 0
