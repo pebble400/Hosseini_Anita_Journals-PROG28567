@@ -12,11 +12,14 @@ public class SquareSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector2 scale = prefab.transform.localScale;
         if (Input.GetMouseButtonDown(0))
         {
             Vector2 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Instantiate(prefab, mouse, Quaternion.identity);
         }
-
+        scale += new Vector2(0.1f, 0.1f) * Input.mouseScrollDelta.y;
+        prefab.transform.localScale = scale;
+        Debug.Log(Input.mouseScrollDelta);
     }
 }
