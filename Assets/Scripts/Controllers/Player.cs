@@ -21,6 +21,10 @@ public class Player : MonoBehaviour
         {
             numberOfBombs(1, howManyBombs, new Vector3(0, 1));
         }
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            SpawnBombAtRandomCorner();
+        }
     }
 
      public void SpawnBombAtOffset(Vector3 inOffset)
@@ -38,5 +42,34 @@ public class Player : MonoBehaviour
             newBomb.transform.position = spawnPosition;
         }
        
+    }
+
+    public void SpawnBombAtRandomCorner()
+    {
+        int randomNum = Random.Range(1, 5);
+        if(randomNum == 1)
+        {
+            GameObject newBomb = Instantiate(bombPrefab);
+            Vector3 spawnPosition = transform.position + new Vector3(-1, 1);
+            newBomb.transform.position = spawnPosition;
+        }
+        if(randomNum == 2)
+        {
+            GameObject newBomb = Instantiate(bombPrefab);
+            Vector3 spawnPosition = transform.position + new Vector3(1, -1);
+            newBomb.transform.position = spawnPosition;
+        }
+        if (randomNum == 3)
+        {
+            GameObject newBomb = Instantiate(bombPrefab);
+            Vector3 spawnPosition = transform.position + new Vector3(1, 1);
+            newBomb.transform.position = spawnPosition;
+        }
+        if (randomNum == 4)
+        {
+            GameObject newBomb = Instantiate(bombPrefab);
+            Vector3 spawnPosition = transform.position + new Vector3(-1, -1);
+            newBomb.transform.position = spawnPosition;
+        }
     }
 }
